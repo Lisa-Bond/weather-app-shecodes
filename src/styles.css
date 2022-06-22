@@ -14,10 +14,14 @@ p {
 button {
   margin: 10px;
 }
+footer {
+  text-align: center;
+  font-size: 14px;
+}
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px;
 }
 .row {
   padding: 20px;
