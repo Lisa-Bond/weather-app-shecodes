@@ -1,0 +1,27 @@
+h1 {
+  font-size: 65px;
+  text-align: left;
+}
+h2 {
+  font-size: 35px;
+}
+li {
+  text-align: center;
+}
+p {
+  text-align: left;
+}
+button {
+  margin: 10px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.row {
+  padding: 20px;
+}
+#weather-symbol {
+  font-size: 20px;
+}
