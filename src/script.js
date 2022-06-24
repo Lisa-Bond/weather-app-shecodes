@@ -53,7 +53,7 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-function searchLocation(location) {
+function searchLocation(position) {
   let apiKey = "6b45fead1f572a2847620f61855bb862";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
@@ -66,8 +66,10 @@ function getCurrentLocation(event) {
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  let h1 = document.querySelector("#temperature");
-  h1.innerHTML = `${temperature}°C`;
+  let h1 = document.querySelector("#city-name");
+  h1.innerHTML = response.data.name;
+  let h3 = document.querySelector("#temperature");
+  h3.innerHTML = `${temperature}°C`;
   let humidity = document.querySelector("#humidity-level");
   humidity.innerHTML = `Humidity ${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind-speed");
